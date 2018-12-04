@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="paamter">
+    <test name="param">
+
+        <classes>
+            <class name="com.course.testng.paramter.ParmterTest"/>
+
+            <parameter name="name" value="lisi"/>
+            <parameter name="age" value="10"/>
+
+        </classes>
+
+    </test>
+
+</suite>

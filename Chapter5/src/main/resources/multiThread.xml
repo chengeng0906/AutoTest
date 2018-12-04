@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<suite name="thread" parallel= "classes"  thread-count="3">
+
+    <!--
+    tests级别：不同的test tag下的用例可以在不同的线程下执行
+                相同test tag下的用例只能用一个线程中执行
+
+    classes级别：相同的class tag 下的用例在一个线程中执行
+
+    method级别：所有用例都可以在不同线程下执行
+
+    thread-count ： 代表最大并发线程数
+
+    xml文件配置 这种方法不能指定线程池，只有方法上可以指定线程池
+    -->
+    <test name="demo1">
+
+        <classes name="cl1">
+
+            <class name="com.course.testng.multiThread.MultiThreadOnXml"/>
+            <class name="com.course.testng.BasicAnnotation"/>
+
+        </classes>
+            <classes name="cl3">
+                <class name="com.course.testng.multiThread.MultiThreadOnXml"/>
+                <class name="com.course.testng.BasicAnnotation"/>
+            </classes>
+
+    </test>
+
+    <test name="demo2">
+
+        <classes name="cl2">
+            <class name="com.course.testng.BasicAnnotation"/>
+            <class name="com.course.testng.multiThread.MultiThreadOnXml"/>
+        </classes>
+
+    </test>
+
+
+</suite>
