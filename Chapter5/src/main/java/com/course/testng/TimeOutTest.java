@@ -8,4 +8,8 @@ public class TimeOutTest {
     public void testSuccess() throws InterruptedException {
         Thread.sleep(4000);
     }
+
+    public void testFail(){
+
+    }
 }
